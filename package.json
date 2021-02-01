@@ -1,0 +1,19 @@
+{
+  "name": "cratss-minimal",
+  "version": "1.0.0",
+  "description": "minimal themes based on cratss",
+  "main": "index.scss",
+  "scripts": {
+    "dev": "sass  --watch src:dist ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "cratss"
+  ],
+  "author": "RAT",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.5"
+  }
+}

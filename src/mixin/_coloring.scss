@@ -1,0 +1,37 @@
+@use "../cratss-core/" as core;
+
+
+
+@mixin fill($type,$section:"themeColor",$theme:'default'){
+    background-color:core.get($theme,$section,$type);
+    color: core.get($theme,"on-"+$section,$type) or black;
+    border-color:core.get($theme,$section,$type);
+};
+
+@mixin fill-soft($type,$section:"themeColor",$theme:'default'){
+    background-color:rgba(core.get($theme,$section,$type),0.2);
+    color: core.get($theme,$section,$type);
+    border-color:rgba(core.get($theme,$section,$type),0.1);
+};
+
+@mixin outline($type,$section:"themecolor",$theme:'default',$width:"thik"){
+    background-color:core.get($theme,"surfaceColor");    
+    color:core.get($theme,"on-surfaceColor") or black;    
+    border-style: solid;
+    border-width: core.get($theme,"borderShape",$width) ;
+    border-color: core.get($theme,$section,$type);
+}
+
+@mixin text($type,$section:"themecolor",$theme:'default'){
+    color:core.get($theme,$section,$type);
+}
+
+@mixin surfaceClean($theme:'default',$type:"default"){
+    background-color: core.get($theme,"surfaceColor",$type)!important;
+}
+
+@mixin noColorSetup(){
+    background-color: unset;
+    color:unset;
+    border: unset;
+}

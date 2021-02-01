@@ -1,0 +1,50 @@
+$default:(
+    "themeColor":(
+        "primary":#713BDB , 
+        "secondary":#33D69F ,
+        "neutro":#a0a5b9
+    ),
+
+    "on-themeColor":(
+        "primary":white ,
+        "secondary":#1f253a ,
+        "neutro":#1f253a ,
+    ),
+
+    "stateColor":(
+        "success":#08a33c ,
+        "info":#068ddb ,
+        "warm":#dbc606 ,
+        "danger":#e83e3e ,
+    ),
+
+    "on-stateColor":(
+        "success":white ,
+        "info":white ,
+        "warm":white ,
+        "danger":white ,
+    ),
+
+    "surfaceColor":(
+        "default":white,
+    ),
+   "on-surfaceColor":(
+        "default":#1f253a ,
+    ),
+
+    "otherColor":(
+        "shadow":rgba(73, 73, 73, 0.4),
+        "overlay":rgba(8, 8, 8, 0.623),
+        "neutro":#a0a5b9,
+    ),
+
+    "radiusShape":(
+        "small":2px ,
+        "medium":6px ,
+        "big":12px ,
+    ),
+    "borderShape":(
+        "thin":1px,
+        "thik":2px
+    ),
+)
