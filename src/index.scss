@@ -9,12 +9,12 @@
 
 
 $themes: () !default;
-$useUtils:false;
+$useUtils:false !default;
 
 @if $themes == (){
     @include core.addTheme($name:"default",$theme:default.$default);
 }@else{
-    @each $themeName, $themeVars in $theme{
+    @each $themeName, $themeVars in $themes{
         @include core.addTheme($name:$themeName,$theme:$themeVars)
     }
 }
