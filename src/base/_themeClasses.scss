@@ -1,32 +1,23 @@
 @use "../cratss-core" as cratssCore;
-@import "../mixin/coloring";
+@use "../mixin/coloring" as colorMixins;
 
-
-// //elevation
-// @for $i from 0 through 5{
-//     .elevation-#{$i}{
-//         @include cratssCore.elevation($i);
-//     }
-// }
-
-// colors types
 $colorGroup:"themeColor" "stateColor";
 @each $section in $colorGroup {
     @include cratssCore.forTypesInThemes($section) using ($theme,$type){
         [colorMode="text"][color=#{$type}],[color=#{$type}]{
-            @include text($type,$section,$theme);        
+            @include colorMixins.text($type,$section,$theme);        
         }
 
         [colorMode="filled"][color=#{$type}]{
-            @include fill($type,$section,$theme);        
+            @include colorMixins.fill($type,$section,$theme);        
         }
     
         [colorMode="filled-soft"][color=#{$type}]{
-            @include fill-soft($type,$section,$theme);        
+            @include colorMixins.fill-soft($type,$section,$theme);        
         }
         
         [colorMode="outline"][color=#{$type}]{
-            @include outline($type,$section,$theme);        
+            @include colorMixins.outline($type,$section,$theme);        
         }
     }
 };
