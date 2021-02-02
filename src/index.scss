@@ -1,3 +1,5 @@
+@forward  "./cratss-core";
+
 @use "./cratss-core" as core;
 @use "./themes/default";
 
@@ -5,8 +7,6 @@
 @import "./mixin/utils/horizontalAlign";
 @import "./mixin/utils/margins";
 @import "./mixin/utils/verticalAlign";
-
-@forward  "./cratss-core";
 
 $themes: () !default;
 $useUtils:false !default;
