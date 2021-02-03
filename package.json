@@ -1,6 +1,6 @@
 {
   "name": "cratss-minimal",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "minimal themes based on cratss",
   "main": "index.scss",
   "scripts": {
