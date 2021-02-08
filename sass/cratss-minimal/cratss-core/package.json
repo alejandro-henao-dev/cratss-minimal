@@ -1,0 +1,18 @@
+{
+  "name": "cratss-core",
+  "version": "1.0.1",
+  "description": "cratss core interface",
+  "main": "index.scss",
+  "scripts": {
+    "test": "sass index.scss test.css"
+  },
+  "keywords": [
+    "sass",
+    "css"
+  ],
+  "author": "RAT",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.5"
+  }
+}

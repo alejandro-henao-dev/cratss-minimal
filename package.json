@@ -1,8 +1,8 @@
 {
   "name": "cratss-minimal",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "minimal themes based on cratss",
-  "main": "index.scss",
+  "main": "sass/cratss-minimal/index.scss",
   "scripts": {
     "dev": "sass  --watch src:dist ",
     "test": "echo \"Error: no test specified\" && exit 1"

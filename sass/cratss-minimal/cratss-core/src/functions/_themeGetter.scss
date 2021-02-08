@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "sass:list";
+@use "../variables" as mainVars;
+
+@mixin addTheme($name:"", $theme){
+    @if $name==""{
+        $name:"defaut";
+        mainVars.$cratssThemes:map.set(mainVars.$cratssThemes,"default",$theme) ;
+    }@else{
+        mainVars.$cratssThemes:map.set(mainVars.$cratssThemes,$name,$theme) ;
+    }
+};
+
+@function getTheme($name:"default"){
+    
+    @return map.get(mainVars.$cratssThemes,$name)
+};
+
+@function getThemes(){
+    $list:();
+
+    @each $key, $val in mainVars.$cratssThemes{
+        $list:list.append($list,$key);
+    };
+    @return $list;
+};

@@ -1,0 +1,25 @@
+@use "sass:map";
+@use "sass:list";
+@use "../variables" as mainVars;
+
+@function getTypes($theme:getTheme(),$groupName){
+    $list:();
+    $group: map.get($theme,$groupName);
+            
+    @each $key, $val in $group{
+        $list:list.append($list,$key);
+    };
+
+    @return $list;
+};
+
+@function get($themeName,$groupName,$type:"default"){
+    
+    @return map.get(
+        map.get(
+            map.get(mainVars.$cratssThemes,$themeName),
+            $groupName
+        ),
+        $type
+    )
+}

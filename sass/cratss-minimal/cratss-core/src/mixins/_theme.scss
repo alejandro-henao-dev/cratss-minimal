@@ -1,0 +1,39 @@
+@use '../functions/themeGetter' as themeGetter;
+@use '../functions/variableGetters' as variableGetter;
+
+@mixin forAllThemes{
+    $themes:themeGetter.getThemes();
+    @each $theme in $themes {
+        @include themeNameSpace($theme){
+            @content($theme);
+        }
+    }
+};
+
+
+@mixin forTypesInThemes($section){
+    @include forAllThemes using ($theme){
+        @include forAllTypes($theme,$section ) using ($type){
+            @content ($theme,$type)
+        }
+    }
+};
+
+@mixin forAllTypes($theme,$section){
+    $types: variableGetter.getTypes(themeGetter.getTheme($theme),$section);
+    @each $type in $types{
+        @content($type);
+    }
+};
+
+@mixin themeNameSpace($theme){
+    @if $theme == default {
+                   
+            @content;
+        
+    } @else if themeGetter.getTheme($theme){
+        .#{$theme}{
+            @content;
+        }
+    }
+}
